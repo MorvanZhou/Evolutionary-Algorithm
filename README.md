@@ -11,7 +11,7 @@
 # Evolutionary Algorithm Tutorials
 
 
-In these tutorials, we will use different method to demonstrate and visualize algorithms like Genetic Algorithm,
+In these tutorials, we will use different methods to demonstrate and visualize algorithms like Genetic Algorithm,
 Evolution Strategy, NEAT etc.
 
 All methods mentioned below have their video and text tutorial in Chinese. Visit [莫烦 Python](https://morvanzhou.github.io/tutorials/) for more.
