@@ -39,6 +39,12 @@ All methods mentioned below have their video and text tutorial in Chinese. Visit
     <img class="course-image" src="/demo/ga.gif">
 </a>
 
+### [Match Phrase Example](https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Genetic%20Algorithm/Match%20Phrase.py)
+
+<a href="https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Genetic%20Algorithm/Match%20Phrase.py">
+    <img class="course-image" src="/demo/phrase.gif">
+</a>
+
 ### [Travel Sales Problem](https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Genetic%20Algorithm/Travel%20Sales%20Person.py)
 
 <a href="https://github.com/MorvanZhou/Tensorflow-Tutorial/blob/master/tutorial-contents/302_simple_classification.py">
