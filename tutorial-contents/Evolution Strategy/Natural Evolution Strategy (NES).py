@@ -1,4 +1,8 @@
 """
+The basic idea about Nature Evolution Strategy with visualation.
+
+Visit my tutorial website for more: https://morvanzhou.github.io/tutorials/
+
 Dependencies:
 Tensorflow >= r1.2
 numpy
@@ -14,8 +18,9 @@ N_POP = 20           # population size
 N_GENERATION = 100   # training step
 LR = 0.02            # learning rate
 
+
 # fitness function
-get_fitness = lambda pred: -((pred[:, 0])**2 + pred[:, 1]**2)
+def get_fitness(pred): return -((pred[:, 0])**2 + pred[:, 1]**2)
 
 # build multivariate distribution
 mean = tf.Variable(tf.random_normal([2, ], 13., 1.), dtype=tf.float32)

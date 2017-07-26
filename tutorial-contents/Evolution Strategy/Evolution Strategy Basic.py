@@ -2,8 +2,10 @@
 The Evolution Strategy can be summarized as the following term:
 {mu/rho +, lambda}-ES
 
-Here we use:
+Here we use following term to find a maximum point.
 {n_pop/n_pop + n_kid}-ES
+
+Visit my tutorial website for more: https://morvanzhou.github.io/tutorials/
 """
 import numpy as np
 import matplotlib.pyplot as plt

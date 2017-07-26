@@ -1,3 +1,8 @@
+"""
+Visualize Genetic Algorithm to find the shortest path for travel sales problem.
+
+Visit my tutorial website for more: https://morvanzhou.github.io/tutorials/
+"""
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -38,7 +43,7 @@ class GA(object):
         return self.pop[idx]
 
     def crossover(self, parent, pop):
-        if np.random.uniform(0, 1) < self.cross_rate:
+        if np.random.rand() < self.cross_rate:
             i_ = np.random.choice(np.arange(self.pop_size), size=1, replace=False)  # select another individual from pop
             cross_points = np.random.randint(0, 2, self.DNA_size).astype(np.bool)  # choose crossover points
             keep_city = parent[~cross_points]  # find the city number
@@ -48,7 +53,7 @@ class GA(object):
 
     def mutate(self, child):
         for point in range(self.DNA_size):
-            if np.random.uniform(0, 1) < self.mutate_rate:
+            if np.random.rand() < self.mutate_rate:
                 swap_point = np.random.randint(0, self.DNA_size)
                 swapA, swapB = child[point], child[swap_point]
                 child[point], child[swap_point] = swapB, swapA

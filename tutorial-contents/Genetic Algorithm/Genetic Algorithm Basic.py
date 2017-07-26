@@ -1,3 +1,8 @@
+"""
+Visualize Genetic Algorithm to find a maximum point in a function.
+
+Visit my tutorial website for more: https://morvanzhou.github.io/tutorials/
+"""
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -27,7 +32,7 @@ def select(pop, fitness):    # nature selection wrt pop's fitness
 
 
 def crossover(parent, pop_copy):     # mating process (genes crossover)
-    if np.random.uniform(0, 1) < CROSS_RATE:
+    if np.random.rand() < CROSS_RATE:
         i_ = np.random.choice(np.arange(POP_SIZE), size=1, replace=False)  # select another individual from pop
         cross_points = np.random.randint(0, 2, DNA_SIZE).astype(np.bool)  # choose a crossover points
         parent[cross_points] = pop[i_, cross_points]  # mating and produce one child
@@ -36,7 +41,7 @@ def crossover(parent, pop_copy):     # mating process (genes crossover)
 
 def mutate(child):
     for point in range(DNA_SIZE):
-        if np.random.uniform(0, 1) < MUTATION_RATE:
+        if np.random.rand() < MUTATION_RATE:
             child[point] = 1 if child[point] == 0 else 0
     return child
 
