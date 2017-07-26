@@ -3,9 +3,7 @@ Based on this paper: Evolution Strategies as a Scalable Alternative to Reinforce
 Details can be found in : https://arxiv.org/abs/1703.03864
 This code is parallel distributed training.
 
-Dependencies:
-numpy
-matplotlib
+Visit more on my tutorial site: https://morvanzhou.github.io/tutorials/
 """
 import numpy as np
 import gym
@@ -91,7 +89,6 @@ def build_net():
 
 
 def train(net_shapes, net_params, optimizer, utility, pool):
-
     # pass seed instead whole noise matrix to parallel will save your time
     noise_seed = np.random.randint(0, 2 ** 32 - 1, size=N_KID).repeat(2)    # mirrored sampling
 
