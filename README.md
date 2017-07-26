@@ -39,52 +39,29 @@ All methods mentioned below have their video and text tutorial in Chinese. Visit
     <img class="course-image" src="/demo/ga.gif">
 </a>
 
-### [Classification](https://github.com/MorvanZhou/Tensorflow-Tutorial/blob/master/tutorial-contents/302_simple_classification.py)
+### [Travel Sales Problem](https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Genetic%20Algorithm/Travel%20Sales%20Person.py)
 
 <a href="https://github.com/MorvanZhou/Tensorflow-Tutorial/blob/master/tutorial-contents/302_simple_classification.py">
-    <img class="course-image" src="https://morvanzhou.github.io/static/results/torch/1-1-3.gif">
+    <img class="course-image" src="/demo/tsp.gif">
 </a>
 
-### [CNN](https://github.com/MorvanZhou/Tensorflow-Tutorial/blob/master/tutorial-contents/401_CNN.py)
-<a href="https://github.com/MorvanZhou/Tensorflow-Tutorial/blob/master/tutorial-contents/401_CNN.py">
-    <img class="course-image" src="https://morvanzhou.github.io/static/results/torch/4-1-2.gif" >
+### [Find Path Example](https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Genetic%20Algorithm/Find%20Path.py)
+<a href="https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Genetic%20Algorithm/Find%20Path.py">
+    <img class="course-image" src="/demo/find path.gif" >
 </a>
 
-### [RNN](https://github.com/MorvanZhou/Tensorflow-Tutorial/blob/master/tutorial-contents/403_RNN_regression.py)
+### [Basic ES](https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Evolution%20Strategy/Evolution%20Strategy%20Basic.py)
 
-<a href="https://github.com/MorvanZhou/Tensorflow-Tutorial/blob/master/tutorial-contents/403_RNN_regression.py">
-    <img class="course-image" src="https://morvanzhou.github.io/static/results/torch/4-3-1.gif" >
+<a href="https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Evolution%20Strategy/Evolution%20Strategy%20Basic.py">
+    <img class="course-image" src="/demo/es.gif" >
 </a>
 
-### [Autoencoder](https://github.com/MorvanZhou/Tensorflow-Tutorial/blob/master/tutorial-contents/404_AutoEncoder.py)
+### [Natural Evolution Strategy (NES)](https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Evolution%20Strategy/Natural%20Evolution%20Strategy%20(NES).py)
 
-<a href="https://github.com/MorvanZhou/Tensorflow-Tutorial/blob/master/tutorial-contents/404_AutoEncoder.py">
-    <img class="course-image" src="https://morvanzhou.github.io/static/results/torch/4-4-1.gif" >
+<a href="https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Evolution%20Strategy/Natural%20Evolution%20Strategy%20(NES).py">
+    <img class="course-image" src="/demo/nes.gif" >
 </a>
 
-<a href="https://github.com/MorvanZhou/Tensorflow-Tutorial/blob/master/tutorial-contents/404_AutoEncoder.py">
-    <img class="course-image" src="https://morvanzhou.github.io/static/results/torch/4-4-2.gif" >
-</a>
-
-### [GAN (Generative Adversarial Nets)](https://github.com/MorvanZhou/Tensorflow-Tutorial/blob/master/tutorial-contents/406_GAN.py)
-<a href="https://github.com/MorvanZhou/Tensorflow-Tutorial/blob/master/tutorial-contents/406_GAN.py">
-    <img class="course-image" src="https://morvanzhou.github.io/static/results/torch/4-6-1.gif" >
-</a>
-
-### [Dropout](https://github.com/MorvanZhou/Tensorflow-Tutorial/blob/master/tutorial-contents/501_dropout.py)
-<a href="https://github.com/MorvanZhou/Tensorflow-Tutorial/blob/master/tutorial-contents/501_dropout.py">
-    <img class="course-image" src="https://morvanzhou.github.io/static/results/torch/5-3-1.gif" >
-</a>
-
-### [Batch Normalization](https://github.com/MorvanZhou/Tensorflow-Tutorial/blob/master/tutorial-contents/502_batch_normalization.py)
-<a href="https://github.com/MorvanZhou/Tensorflow-Tutorial/blob/master/tutorial-contents/502_batch_normalization.py">
-    <img class="course-image" src="https://morvanzhou.github.io/static/results/torch/5-4-2.gif" >
-</a>
-
-### [Visualize Gradient Descent](https://github.com/MorvanZhou/Tensorflow-Tutorial/blob/master/tutorial-contents/503_visualize_gradient_descent.py)
-<a href="https://github.com/MorvanZhou/Tensorflow-Tutorial/blob/master/tutorial-contents/503_visualize_gradient_descent.py">
-    <img class="course-image" src="https://morvanzhou.github.io/static/results/tensorflow/5_15_01.gif" >
-</a>
 
 # Donation
 
