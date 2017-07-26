@@ -62,6 +62,11 @@ All methods mentioned below have their video and text tutorial in Chinese. Visit
     <img class="course-image" src="/demo/nes.gif" >
 </a>
 
+### [ES with Neural Net](https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Using%20Neural%20Nets/Evolution%20Strategy%20with%20Neural%20Nets.py)
+
+<a href="https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Using%20Neural%20Nets/Evolution%20Strategy%20with%20Neural%20Nets.py">
+    <img class="course-image" src="/demo/es_rl.gif" >
+</a>
 
 # Donation
 

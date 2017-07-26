@@ -11,7 +11,6 @@ import numpy as np
 import gym
 import multiprocessing as mp
 import time
-# np.random.seed(0)
 
 N_KID = 10                  # half of the training population
 N_GENERATION = 5000         # training step
@@ -25,7 +24,7 @@ CONFIG = [
          n_feature=2, n_action=3, continuous_a=[False], ep_max_step=200, eval_threshold=-120),
     dict(game="Pendulum-v0",
          n_feature=3, n_action=1, continuous_a=[True, 2.], ep_max_step=200, eval_threshold=-180)
-][1]    # choose your game
+][2]    # choose your game
 
 
 def sign(k_id): return -1. if k_id % 2 == 0 else 1.  # mirrored sampling
@@ -135,7 +134,7 @@ if __name__ == "__main__":
             'Gen: ', g,
             '| Net_R: %.1f' % mar,
             '| Kid_avg_R: %.1f' % kid_rewards.mean(),
-            '| Step_T: %.2f' % (time.time() - t0),)
+            '| Gen_T: %.2f' % (time.time() - t0),)
         if mar >= CONFIG['eval_threshold']: break
 
     # test
