@@ -8,17 +8,21 @@ MUTATION_RATE = 0.003    # mutation probability
 N_GENERATIONS = 200
 X_BOUND = [0, 5]         # x upper and lower bounds
 
-F = lambda x: np.sin(10*x)*x + np.cos(2*x)*x     # to find the maximum of this function
+
+def F(x): return np.sin(10*x)*x + np.cos(2*x)*x     # to find the maximum of this function
+
 
 # find non-zero fitness for selection
-get_fitness = lambda pred: pred + 1e-3 - np.min(pred)
+def get_fitness(pred): return pred + 1e-3 - np.min(pred)
+
 
 # convert binary DNA to decimal and normalize it to a range(0, 5)
-translateDNA = lambda pop: pop.dot(2 ** np.arange(DNA_SIZE)[::-1]) / (2**DNA_SIZE-1) * X_BOUND[1]
+def translateDNA(pop): return pop.dot(2 ** np.arange(DNA_SIZE)[::-1]) / (2**DNA_SIZE-1) * X_BOUND[1]
 
 
 def select(pop, fitness):    # nature selection wrt pop's fitness
-    idx = np.random.choice(np.arange(POP_SIZE), size=POP_SIZE, replace=True, p=fitness/fitness.sum())
+    idx = np.random.choice(np.arange(POP_SIZE), size=POP_SIZE, replace=True,
+                           p=fitness/fitness.sum())
     return pop[idx]
 
 
@@ -41,17 +45,18 @@ pop = np.random.randint(0, 2, (1, DNA_SIZE)).repeat(POP_SIZE, axis=0)  # initial
 
 plt.ion()       # something about plotting
 x = np.linspace(*X_BOUND, 200)
+plt.plot(x, F(x))
 
 for _ in range(N_GENERATIONS):
     F_values = F(translateDNA(pop))    # compute function value by extracting DNA
 
     # something about plotting
-    plt.cla()
-    plt.scatter(translateDNA(pop), F_values, s=200, lw=0, c='red', alpha=0.5); plt.plot(x, F(x))
-    plt.pause(0.05)
+    if 'sca' in globals(): sca.remove()
+    sca = plt.scatter(translateDNA(pop), F_values, s=200, lw=0, c='red', alpha=0.5); plt.pause(0.05)
 
-    # evolution
+    # GA part (evolution)
     fitness = get_fitness(F_values)
+    print("Most fitted DNA: ", pop[np.argmax(fitness), :])
     pop = select(pop, fitness)
     pop_copy = pop.copy()
     for parent in pop:

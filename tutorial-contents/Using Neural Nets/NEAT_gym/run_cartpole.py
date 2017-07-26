@@ -12,8 +12,6 @@ GENERATION_EP = 10      # evaluate by the minimum of 10-episode rewards
 TRAINING = False         # training or testing
 CHECKPOINT = 9          # test on this checkpoint
 
-softmax = lambda logits: np.exp(logits)/(np.sum(np.exp(logits)) + 1e-4)   # softmax function for choosing action
-
 
 def eval_genomes(genomes, config):
     for genome_id, genome in genomes:
@@ -23,8 +21,8 @@ def eval_genomes(genomes, config):
             accumulative_r = 0.         # stage longer to get a greater episode reward
             observation = env.reset()
             for t in range(EP_STEP):
-                action_logits = net.activate(observation)
-                action = np.argmax(softmax(action_logits))
+                action_values = net.activate(observation)
+                action = np.argmax(action_values)
                 observation_, reward, done, _ = env.step(action)
                 accumulative_r += reward
                 if done:
@@ -65,7 +63,7 @@ def evaluation():
         s = env.reset()
         while True:
             env.render()
-            a = np.argmax(softmax(net.activate(s)))
+            a = np.argmax(net.activate(s))
             s, r, done, _ = env.step(a)
             if done: break
 

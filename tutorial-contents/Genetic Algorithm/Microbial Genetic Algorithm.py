@@ -8,7 +8,8 @@ MUTATION_RATE = 0.01     # mutation probability
 N_GENERATIONS = 200
 X_BOUND = [0, 5]         # x upper and lower bounds
 
-F = lambda x: np.sin(10*x)*x + np.cos(2*x)*x     # to find the maximum of this function
+
+def F(x): return np.sin(10*x)*x + np.cos(2*x)*x     # to find the maximum of this function
 
 
 class MGA(object):
@@ -64,6 +65,7 @@ class MGA(object):
 
 plt.ion()       # something about plotting
 x = np.linspace(*X_BOUND, 200)
+plt.plot(x, F(x))
 
 ga = MGA(DNA_size=DNA_SIZE, DNA_bound=[0, 1], cross_rate=CROSS_RATE, mutation_rate=MUTATION_RATE, pop_size=POP_SIZE)
 
@@ -71,8 +73,7 @@ for _ in range(N_GENERATIONS):                    # 100 generations
     DNA_prod, pred = ga.evolve(5)          # natural selection, crossover and mutation
 
     # something about plotting
-    plt.cla()
-    plt.scatter(DNA_prod, pred, s=200, lw=0, c='red', alpha=0.5); plt.plot(x, F(x))
-    plt.pause(0.05)
+    if 'sca' in globals(): sca.remove()
+    sca = plt.scatter(DNA_prod, pred, s=200, lw=0, c='red', alpha=0.5); plt.pause(0.05)
 
 plt.ioff();plt.show()

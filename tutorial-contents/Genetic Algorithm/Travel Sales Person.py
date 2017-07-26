@@ -4,7 +4,7 @@ import numpy as np
 N_CITIES = 20  # DNA size
 CROSS_RATE = 0.1
 MUTATE_RATE = 0.02
-POP_SIZE = 300
+POP_SIZE = 500
 N_GENERATIONS = 500
 
 
@@ -69,10 +69,11 @@ class TravelSalesPerson(object):
         self.city_position = np.random.uniform(0, 1, size=(n_cities, 2))
         plt.ion()
 
-    def plotting(self, lx, ly):
+    def plotting(self, lx, ly, total_d):
         plt.cla()
         plt.scatter(self.city_position[:, 0].T, self.city_position[:, 1].T, s=100, c='k')
         plt.plot(lx.T, ly.T, 'r-')
+        plt.text(-0.05, -0.05, "Total distance=%.2f" % total_d, fontdict={'size': 20, 'color': 'red'})
         plt.xlim((-0.1, 1.1))
         plt.ylim((-0.1, 1.1))
         plt.pause(0.01)
@@ -86,10 +87,9 @@ for generation in range(N_GENERATIONS):
     fitness, total_distance = ga.get_fitness(lx, ly)
     ga.evolve(fitness)
     best_idx = np.argmax(fitness)
-    print('Gen:', generation, '| best fit: %.2f' % fitness[best_idx],
-          '| travel distance: %.2f' % total_distance[best_idx])
+    print('Gen:', generation, '| best fit: %.2f' % fitness[best_idx],)
 
-    env.plotting(lx[best_idx], ly[best_idx])
+    env.plotting(lx[best_idx], ly[best_idx], total_distance[best_idx])
 
 plt.ioff()
 plt.show()

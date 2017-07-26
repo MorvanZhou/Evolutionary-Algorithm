@@ -35,15 +35,15 @@ class GA(object):
         return self.pop[idx]
 
     def crossover(self, parent, pop):
-        if np.random.uniform(0, 1) < self.cross_rate:
+        if np.random.rand() < self.cross_rate:
             i_ = np.random.choice(np.arange(self.pop_size), size=1, replace=False)  # select another individual from pop
             cross_points = np.random.randint(0, 2, self.DNA_size).astype(np.bool)   # choose crossover points
-            parent[cross_points] = pop[i_, cross_points]  # mating and produce one child
+            parent[cross_points] = pop[i_, cross_points]                            # mating and produce one child
         return parent
 
     def mutate(self, child):
         for point in range(self.DNA_size):
-            if np.random.uniform(0, 1) < self.mutate_rate:
+            if np.random.rand() < self.mutate_rate:
                 child[point] = np.random.randint(*self.DNA_bound)  # choose a random ASCII index
         return child
 
@@ -56,14 +56,15 @@ class GA(object):
             parent[:] = child
         self.pop = pop
 
+if __name__ == '__main__':
+    ga = GA(DNA_size=DNA_SIZE, DNA_bound=ASCII_BOUND, cross_rate=CROSS_RATE,
+            mutation_rate=MUTATION_RATE, pop_size=POP_SIZE)
 
-ga = GA(DNA_size=DNA_SIZE, DNA_bound=ASCII_BOUND, cross_rate=CROSS_RATE, mutation_rate=MUTATION_RATE, pop_size=POP_SIZE)
-
-for generation in range(N_GENERATIONS):
-    fitness = ga.get_fitness()
-    best_DNA = ga.pop[np.argmax(fitness)]
-    best_phrase = ga.translateDNA(best_DNA)
-    print('Gen', generation, ': ', best_phrase)
-    if best_phrase == TARGET_PHRASE:
-        break
-    ga.evolve()
+    for generation in range(N_GENERATIONS):
+        fitness = ga.get_fitness()
+        best_DNA = ga.pop[np.argmax(fitness)]
+        best_phrase = ga.translateDNA(best_DNA)
+        print('Gen', generation, ': ', best_phrase)
+        if best_phrase == TARGET_PHRASE:
+            break
+        ga.evolve()

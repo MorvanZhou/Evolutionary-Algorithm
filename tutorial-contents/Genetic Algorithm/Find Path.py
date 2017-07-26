@@ -45,16 +45,16 @@ class GA(object):
         return self.pop[idx]
 
     def crossover(self, parent, pop):
-        if np.random.uniform(0, 1) < self.cross_rate:
+        if np.random.rand() < self.cross_rate:
             i_ = np.random.choice(np.arange(self.pop_size), size=1, replace=False)  # select another individual from pop
             cross_points = np.random.randint(0, 2, self.DNA_size).astype(np.bool)   # choose crossover points
-            parent[cross_points] = pop[i_, cross_points]  # mating and produce one child
+            parent[cross_points] = pop[i_, cross_points]                            # mating and produce one child
         return parent
 
     def mutate(self, child):
         for point in range(self.DNA_size):
-            if np.random.uniform(0, 1) < self.mutate_rate:
-                child[point] = np.random.randint(*self.DNA_bound)  # choose a random ASCII index
+            if np.random.rand() < self.mutate_rate:
+                child[point] = np.random.randint(*self.DNA_bound)
         return child
 
     def evolve(self, fitness):
