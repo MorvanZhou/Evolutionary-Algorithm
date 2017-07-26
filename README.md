@@ -22,6 +22,7 @@ All methods mentioned below have their video and text tutorial in Chinese. Visit
   * [Match Phrase Example](https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Genetic%20Algorithm/Match%20Phrase.py)
   * [Travel Sales Problem](https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Genetic%20Algorithm/Travel%20Sales%20Person.py)
   * [Find Path Example](https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Genetic%20Algorithm/Find%20Path.py)
+  * [Microbial GA](https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Genetic%20Algorithm/Microbial%20Genetic%20Algorithm.py)
 * [Evolution Strategy](https://github.com/MorvanZhou/Evolutionary-Algorithm/tree/master/tutorial-contents/Evolution%20Strategy)
   * [Basic ES](https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Evolution%20Strategy/Evolution%20Strategy%20Basic.py)
   * [(1+1)-ES](https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Evolution%20Strategy/(1%2B1)-ES.py)
