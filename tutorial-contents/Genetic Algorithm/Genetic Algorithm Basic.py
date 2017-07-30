@@ -31,9 +31,9 @@ def select(pop, fitness):    # nature selection wrt pop's fitness
     return pop[idx]
 
 
-def crossover(parent, pop_copy):     # mating process (genes crossover)
+def crossover(parent, pop):     # mating process (genes crossover)
     if np.random.rand() < CROSS_RATE:
-        i_ = np.random.choice(np.arange(POP_SIZE), size=1)                  # select another individual from pop
+        i_ = np.random.randint(0, POP_SIZE, 1)                  # select another individual from pop
         cross_points = np.random.randint(0, 2, DNA_SIZE).astype(np.bool)    # choose crossover points
         parent[cross_points] = pop[i_, cross_points]                        # mating and produce one child
     return parent
