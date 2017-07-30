@@ -39,14 +39,14 @@ class MGA(object):
     def crossover(self, loser_winner):      # crossover for loser
         cross_idx = np.empty((self.DNA_size,)).astype(np.bool)
         for i in range(self.DNA_size):
-            cross_idx[i] = True if np.random.uniform(0, 1) < self.cross_rate else False  # crossover index
+            cross_idx[i] = True if np.random.rand() < self.cross_rate else False  # crossover index
         loser_winner[0, cross_idx] = loser_winner[1, cross_idx]  # assign winners genes to loser
         return loser_winner
 
     def mutate(self, loser_winner):         # mutation for loser
         mutation_idx = np.empty((self.DNA_size,)).astype(np.bool)
         for i in range(self.DNA_size):
-            mutation_idx[i] = True if np.random.uniform(0, 1) < self.mutate_rate else False  # mutation index
+            mutation_idx[i] = True if np.random.rand() < self.mutate_rate else False  # mutation index
         # flip values in mutation points
         loser_winner[0, mutation_idx] = ~loser_winner[0, mutation_idx].astype(np.bool)
         return loser_winner

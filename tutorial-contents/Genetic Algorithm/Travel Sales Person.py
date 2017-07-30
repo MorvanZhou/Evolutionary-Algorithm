@@ -71,7 +71,7 @@ class GA(object):
 
 class TravelSalesPerson(object):
     def __init__(self, n_cities):
-        self.city_position = np.random.uniform(0, 1, size=(n_cities, 2))
+        self.city_position = np.random.rand(n_cities, 2)
         plt.ion()
 
     def plotting(self, lx, ly, total_d):
