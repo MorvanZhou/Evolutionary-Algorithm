@@ -30,7 +30,7 @@ All methods mentioned below have their video and text tutorial in Chinese. Visit
 * [Using Neural Nets](https://github.com/MorvanZhou/Evolutionary-Algorithm/tree/master/tutorial-contents/Using%20Neural%20Nets)
   * [NEAT for Supervised-Learning](https://github.com/MorvanZhou/Evolutionary-Algorithm/tree/master/tutorial-contents/Using%20Neural%20Nets/NEAT)
   * [NEAT for Reinforcement-Learning](https://github.com/MorvanZhou/Evolutionary-Algorithm/tree/master/tutorial-contents/Using%20Neural%20Nets/NEAT_gym)
-  * [ES with Neural Net](https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Using%20Neural%20Nets/Evolution%20Strategy%20with%20Neural%20Nets.py)
+  * [Distributed ES with Neural Nets (OpenAI)](https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Using%20Neural%20Nets/Evolution%20Strategy%20with%20Neural%20Nets.py)
 
 
 ### [Basic GA](https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Genetic%20Algorithm/Genetic%20Algorithm%20Basic.py)
@@ -69,7 +69,7 @@ All methods mentioned below have their video and text tutorial in Chinese. Visit
     <img class="course-image" src="/demo/nes.gif" >
 </a>
 
-### [ES with Neural Net](https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Using%20Neural%20Nets/Evolution%20Strategy%20with%20Neural%20Nets.py)
+### [Distributed ES with Neural Nets (OpenAI)](https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Using%20Neural%20Nets/Evolution%20Strategy%20with%20Neural%20Nets.py)
 
 <a href="https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Using%20Neural%20Nets/Evolution%20Strategy%20with%20Neural%20Nets.py">
     <img class="course-image" src="/demo/es_rl.gif" >
