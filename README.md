@@ -9,7 +9,6 @@
 
 ## Evolutionary Algorithm Tutorials
 
-
 In these tutorials, we will demonstrate and visualize algorithms like Genetic Algorithm,
 Evolution Strategy, NEAT etc.
 
