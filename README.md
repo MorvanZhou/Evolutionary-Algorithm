@@ -7,7 +7,7 @@
 
 <br>
 
-# Evolutionary Algorithm Tutorials
+## Evolutionary Algorithm Tutorials
 
 
 In these tutorials, we will demonstrate and visualize algorithms like Genetic Algorithm,
