@@ -1,11 +1,14 @@
-
-
-## Evolutionary Algorithm Tutorials
+<p align="center">
+    <a href="https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/EA.jpg?raw=true" target="_blank">
+    <img width="40%" src="https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/EA.jpg" style="max-width:100%;">
+    </a>
+</p>
 
 In these tutorials, we will demonstrate and visualize algorithms like Genetic Algorithm,
 Evolution Strategy, NEAT etc.
 
 All methods mentioned below have their video and text tutorial in Chinese. Visit [莫烦 Python](https://morvanzhou.github.io/tutorials/) for more.
+
 
 * [Genetic Algorithm](https://github.com/MorvanZhou/Evolutionary-Algorithm/tree/master/tutorial-contents/Genetic%20Algorithm)
   * [Basic GA](https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Genetic%20Algorithm/Genetic%20Algorithm%20Basic.py)
