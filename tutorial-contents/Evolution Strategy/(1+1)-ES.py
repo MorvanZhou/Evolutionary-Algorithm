@@ -50,7 +50,7 @@ for _ in range(N_GENERATIONS):
     # ES part
     kid = make_kid(parent)
     py, ky = F(parent), F(kid)       # for later plot
-    parent = kill_bad(parent, kid)   # keep some good parent for elitism
+    parent = kill_bad(parent, kid)
 
     # something about plotting
     plt.cla()
