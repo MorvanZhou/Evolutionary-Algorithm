@@ -7,7 +7,6 @@ Evolution Strategy, NEAT etc.
 
 All methods mentioned below have their video and text tutorial in Chinese. Visit [莫烦 Python](https://morvanzhou.github.io/tutorials/) for more.
 
-
 * [Genetic Algorithm](https://github.com/MorvanZhou/Evolutionary-Algorithm/tree/master/tutorial-contents/Genetic%20Algorithm)
   * [Basic GA](https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Genetic%20Algorithm/Genetic%20Algorithm%20Basic.py)
   * [Match Phrase Example](https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/tutorial-contents/Genetic%20Algorithm/Match%20Phrase.py)
