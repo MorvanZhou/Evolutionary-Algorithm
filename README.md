@@ -1,11 +1,4 @@
-<p align="center">
-    <a href="https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/EA.jpg?raw=true" target="_blank">
-    <img width="40%" src="https://github.com/MorvanZhou/Evolutionary-Algorithm/blob/master/EA.jpg" style="max-width:100%;">
-    </a>
-</p>
 
-
-<br>
 
 ## Evolutionary Algorithm Tutorials
 
