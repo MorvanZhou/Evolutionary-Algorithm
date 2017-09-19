@@ -47,7 +47,7 @@ class GA(object):
             i_ = np.random.randint(0, self.pop_size, size=1)                        # select another individual from pop
             cross_points = np.random.randint(0, 2, self.DNA_size).astype(np.bool)   # choose crossover points
             keep_city = parent[~cross_points]                                       # find the city number
-            swap_city = np.setdiff1d(pop[i_, :], keep_city)
+            swap_city = pop[i_, np.isin(pop[i_].ravel(), keep_city, invert=True)]
             parent[:] = np.concatenate((keep_city, swap_city))
         return parent
 
