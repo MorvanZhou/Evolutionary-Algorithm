@@ -67,6 +67,6 @@ for _ in range(N_GENERATIONS):
     for parent in pop:
         child = crossover(parent, pop_copy)
         child = mutate(child)
-        parent[:] = child       # parent is replaced its child
+        parent[:] = child       # parent is replaced by its child
 
 plt.ioff(); plt.show()
