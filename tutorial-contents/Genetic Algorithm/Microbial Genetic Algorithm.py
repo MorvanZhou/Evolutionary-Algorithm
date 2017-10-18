@@ -31,7 +31,7 @@ class MGA(object):
 
     def translateDNA(self, pop):
         # convert binary DNA to decimal and normalize it to a range(0, 5)
-        return pop.dot(2 ** np.arange(self.DNA_size)[::-1]) / (2 ** self.DNA_size - 1) * X_BOUND[1]
+        return pop.dot(2 ** np.arange(self.DNA_size)[::-1]) / float(2 ** self.DNA_size - 1) * X_BOUND[1]
 
     def get_fitness(self, product):
         return product      # it is OK to use product value as fitness in here

@@ -22,7 +22,7 @@ def get_fitness(pred): return pred + 1e-3 - np.min(pred)
 
 
 # convert binary DNA to decimal and normalize it to a range(0, 5)
-def translateDNA(pop): return pop.dot(2 ** np.arange(DNA_SIZE)[::-1]) / (2**DNA_SIZE-1) * X_BOUND[1]
+def translateDNA(pop): return pop.dot(2 ** np.arange(DNA_SIZE)[::-1]) / float(2**DNA_SIZE-1) * X_BOUND[1]
 
 
 def select(pop, fitness):    # nature selection wrt pop's fitness
