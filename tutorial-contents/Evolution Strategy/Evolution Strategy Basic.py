@@ -6,18 +6,32 @@ Here we use following term to find a maximum point.
 {n_pop/n_pop + n_kid}-ES
 
 Visit my tutorial website for more: https://morvanzhou.github.io/tutorials/
+MorvanZhou
 """
+
+## %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+## %% Modified by jecs89
+## %% website: jecs89.site
+## %% github: https://github.com/jecs89/
+## %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+## %% DON'T FORGET THE CREDITS OF THE CODE
+## %% IF YOU ARE INTERESTED TO PERFORM EXPERIMENTS
+## %% WRITE ME AND WE CAN WORK TOGETHER
+## %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 import numpy as np
 import matplotlib.pyplot as plt
 
 DNA_SIZE = 1             # DNA (real number)
-DNA_BOUND = [0, 5]       # solution upper and lower bounds
-N_GENERATIONS = 200
+DNA_BOUND = [-32, 32]       # solution upper and lower bounds
+N_GENERATIONS = 75
 POP_SIZE = 100           # population size
 N_KID = 50               # n kids per generation
 
-
-def F(x): return np.sin(10*x)*x + np.cos(2*x)*x     # to find the maximum of this function
+##Ackley, Rastrigin Function added
+def F(x): 
+    # return -1 * (-20 * np.exp(-0.2*np.sqrt(x*x/1)) - np.exp(1.0/1 * np.cos(2*np.pi*x)) + 20 + np.exp(1) )    # to find the maximum of this function
+    return 10*1.0  + x*x - 10 * np.cos(2.0*np.pi*x)
 
 
 # find non-zero fitness for selection
@@ -74,3 +88,4 @@ for _ in range(N_GENERATIONS):
     pop = kill_bad(pop, kids)   # keep some good parent for elitism
 
 plt.ioff(); plt.show()
+
