@@ -46,7 +46,7 @@ def mutate(child):
     return child
 
 
-pop = np.random.randint(0, 2, (1, DNA_SIZE)).repeat(POP_SIZE, axis=0)  # initialize the pop DNA
+pop = np.random.randint(2, size=(POP_SIZE, DNA_SIZE))   # initialize the pop DNA
 
 plt.ion()       # something about plotting
 x = np.linspace(*X_BOUND, 200)
