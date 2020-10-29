@@ -10,19 +10,19 @@ Evolution Strategy, NEAT etc.
 All methods mentioned below have their video and text tutorial in Chinese. Visit [莫烦 Python](https://mofanpy.com/) for more.
 
 
-* [Genetic Algorithm](/tutorial-contents/Genetic%20Algorithm)
+* [Genetic Algorithm](tutorial-contents/Genetic%20Algorithm)
   * [Basic GA](tutorial-contents/Genetic%20Algorithm/Genetic%20Algorithm%20Basic.py)
   * [Match Phrase Example](tutorial-contents/Genetic%20Algorithm/Match%20Phrase.py)
   * [Travel Sales Problem](tutorial-contents/Genetic%20Algorithm/Travel%20Sales%20Person.py)
   * [Find Path Example](tutorial-contents/Genetic%20Algorithm/Find%20Path.py)
   * [Microbial GA](tutorial-contents/Genetic%20Algorithm/Microbial%20Genetic%20Algorithm.py)
-* [Evolution Strategy](/tutorial-contents/Evolution%20Strategy)
+* [Evolution Strategy](tutorial-contents/Evolution%20Strategy)
   * [Basic ES](tutorial-contents/Evolution%20Strategy/Evolution%20Strategy%20Basic.py)
   * [(1+1)-ES](tutorial-contents/Evolution%20Strategy/(1%2B1)-ES.py)
   * [Natural Evolution Strategy (NES)](tutorial-contents/Evolution%20Strategy/Natural%20Evolution%20Strategy%20(NES).py)
-* [Using Neural Nets](/tutorial-contents/Using%20Neural%20Nets)
-  * [NEAT for Supervised-Learning](/tutorial-contents/Using%20Neural%20Nets/NEAT)
-  * [NEAT for Reinforcement-Learning](/tutorial-contents/Using%20Neural%20Nets/NEAT_gym)
+* [Using Neural Nets](tutorial-contents/Using%20Neural%20Nets)
+  * [NEAT for Supervised-Learning](tutorial-contents/Using%20Neural%20Nets/NEAT)
+  * [NEAT for Reinforcement-Learning](tutorial-contents/Using%20Neural%20Nets/NEAT_gym)
   * [Distributed ES with Neural Nets (OpenAI)](tutorial-contents/Using%20Neural%20Nets/Evolution%20Strategy%20with%20Neural%20Nets.py)
 
 

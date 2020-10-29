@@ -1,7 +1,7 @@
 """
 Visualize Genetic Algorithm to find a path to the target.
 
-Visit my tutorial website for more: https://morvanzhou.github.io/tutorials/
+Visit my tutorial website for more: https://mofanpy.com/tutorials/
 """
 import matplotlib.pyplot as plt
 import numpy as np

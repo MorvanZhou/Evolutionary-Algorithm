@@ -1,7 +1,7 @@
 """
 The basic idea about Nature Evolution Strategy with visualation.
 
-Visit my tutorial website for more: https://morvanzhou.github.io/tutorials/
+Visit my tutorial website for more: https://mofanpy.com/tutorials/
 
 Dependencies:
 Tensorflow >= r1.2

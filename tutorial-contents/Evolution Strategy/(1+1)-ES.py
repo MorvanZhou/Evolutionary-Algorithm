@@ -1,7 +1,7 @@
 """
 (1+1)-ES with 1/5th success rule with visualization.
 
-Visit my tutorial website for more: https://morvanzhou.github.io/tutorials/
+Visit my tutorial website for more: https://mofanpy.com/tutorials/
 """
 import numpy as np
 import matplotlib.pyplot as plt

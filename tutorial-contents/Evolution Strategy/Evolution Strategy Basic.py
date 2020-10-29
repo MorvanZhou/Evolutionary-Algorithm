@@ -5,7 +5,7 @@ The Evolution Strategy can be summarized as the following term:
 Here we use following term to find a maximum point.
 {n_pop/n_pop + n_kid}-ES
 
-Visit my tutorial website for more: https://morvanzhou.github.io/tutorials/
+Visit my tutorial website for more: https://mofanpy.com/tutorials/
 """
 import numpy as np
 import matplotlib.pyplot as plt

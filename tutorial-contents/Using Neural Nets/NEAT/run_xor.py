@@ -2,7 +2,7 @@
 Using NEAT for supervised learning. This example comes from http://neat-python.readthedocs.io/en/latest/xor_example.html
 
 The detail for NEAT can be find in : http://nn.cs.utexas.edu/downloads/papers/stanley.cec02.pdf
-Visit my tutorial website for more: https://morvanzhou.github.io/tutorials/
+Visit my tutorial website for more: https://mofanpy.com/tutorials/
 """
 
 import os

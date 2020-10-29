@@ -1,7 +1,7 @@
 """
 Visualize Genetic Algorithm to find a maximum point in a function.
 
-Visit my tutorial website for more: https://morvanzhou.github.io/tutorials/
+Visit my tutorial website for more: https://mofanpy.com/tutorials/
 """
 import numpy as np
 import matplotlib.pyplot as plt

@@ -1,7 +1,7 @@
 """
 Visualize Microbial Genetic Algorithm to find the maximum point in a graph.
 
-Visit my tutorial website for more: https://morvanzhou.github.io/tutorials/
+Visit my tutorial website for more: https://mofanpy.com/tutorials/
 """
 import numpy as np
 import matplotlib.pyplot as plt

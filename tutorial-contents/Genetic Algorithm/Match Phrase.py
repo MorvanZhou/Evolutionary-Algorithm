@@ -1,7 +1,7 @@
 """
 Visualize Genetic Algorithm to match the target phrase.
 
-Visit my tutorial website for more: https://morvanzhou.github.io/tutorials/
+Visit my tutorial website for more: https://mofanpy.com/tutorials/
 """
 import numpy as np
 

@@ -1,7 +1,7 @@
 """
 Visualize Genetic Algorithm to find the shortest path for travel sales problem.
 
-Visit my tutorial website for more: https://morvanzhou.github.io/tutorials/
+Visit my tutorial website for more: https://mofanpy.com/tutorials/
 """
 import matplotlib.pyplot as plt
 import numpy as np
