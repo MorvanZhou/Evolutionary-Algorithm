@@ -30,42 +30,42 @@ All methods mentioned below have their video and text tutorial in Chinese. Visit
 
 
 <a href="tutorial-contents/Genetic%20Algorithm/Genetic%20Algorithm%20Basic.py">
-    <img class="course-image" src="/demo/ga.gif">
+    <img class="course-image" src="https://github.com/MorvanZhou/Evolutionary-Algorithm/demo/ga.gif">
 </a>
 
 ### [Match Phrase Example](tutorial-contents/Genetic%20Algorithm/Match%20Phrase.py)
 
 <a href="tutorial-contents/Genetic%20Algorithm/Match%20Phrase.py">
-    <img class="course-image" src="/demo/phrase.gif">
+    <img class="course-image" src="https://github.com/MorvanZhou/Evolutionary-Algorithm/demo/phrase.gif">
 </a>
 
 ### [Travel Sales Problem](tutorial-contents/Genetic%20Algorithm/Travel%20Sales%20Person.py)
 
-<a href="https://github.com/MorvanZhou/Tensorflow-Tutorial/blob/master/tutorial-contents/302_simple_classification.py">
-    <img class="course-image" src="/demo/tsp.gif">
+<a href="tutorial-contents/Genetic%20Algorithm/Travel%20Sales%20Person.py">
+    <img class="course-image" src="https://github.com/MorvanZhou/Evolutionary-Algorithm/demo/tsp.gif">
 </a>
 
 ### [Find Path Example](tutorial-contents/Genetic%20Algorithm/Find%20Path.py)
 <a href="tutorial-contents/Genetic%20Algorithm/Find%20Path.py">
-    <img class="course-image" src="/demo/find path.gif" >
+    <img class="course-image" src="https://github.com/MorvanZhou/Evolutionary-Algorithm/demo/find path.gif" >
 </a>
 
 ### [Basic ES](tutorial-contents/Evolution%20Strategy/Evolution%20Strategy%20Basic.py)
 
 <a href="tutorial-contents/Evolution%20Strategy/Evolution%20Strategy%20Basic.py">
-    <img class="course-image" src="/demo/es.gif" >
+    <img class="course-image" src="https://github.com/MorvanZhou/Evolutionary-Algorithm/demo/es.gif" >
 </a>
 
 ### [Natural Evolution Strategy (NES)](tutorial-contents/Evolution%20Strategy/Natural%20Evolution%20Strategy%20(NES).py)
 
 <a href="tutorial-contents/Evolution%20Strategy/Natural%20Evolution%20Strategy%20(NES).py">
-    <img class="course-image" src="/demo/nes.gif" >
+    <img class="course-image" src="https://github.com/MorvanZhou/Evolutionary-Algorithm/demo/nes.gif" >
 </a>
 
 ### [Distributed ES with Neural Nets (OpenAI)](tutorial-contents/Using%20Neural%20Nets/Evolution%20Strategy%20with%20Neural%20Nets.py)
 
 <a href="tutorial-contents/Using%20Neural%20Nets/Evolution%20Strategy%20with%20Neural%20Nets.py">
-    <img class="course-image" src="/demo/es_rl.gif" >
+    <img class="course-image" src="https://github.com/MorvanZhou/Evolutionary-Algorithm/demo/es_rl.gif" >
 </a>
 
 # Donation
