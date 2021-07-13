@@ -34,6 +34,7 @@ class GA(object):
     def get_fitness(self, line_x, line_y):
         total_distance = np.empty((line_x.shape[0],), dtype=np.float64)
         for i, (xs, ys) in enumerate(zip(line_x, line_y)):
+            tmp= np.diff(xs)
             total_distance[i] = np.sum(np.sqrt(np.square(np.diff(xs)) + np.square(np.diff(ys))))
         fitness = np.exp(self.DNA_size * 2 / total_distance)
         return fitness, total_distance

@@ -1,12 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-N_DIMS = 5  # DNA size
-DNA_SIZE = 10             # DNA (real number)
+N_DIMS = 10  # DNA size
+DNA_SIZE = N_DIMS * 2             # DNA (real number)
 DNA_BOUND = [0, 20]       # solution upper and lower bounds
-N_GENERATIONS = 200
-POP_SIZE = 100           # population size
-N_KID = 50               # n kids per generation
+N_GENERATIONS = 800
+POP_SIZE = 600           # population size
+N_KID = 300               # n kids per generation
 
 TargePos=[10,10]
 
@@ -16,7 +16,7 @@ def MakePnt():
 def GetFitness(lens):
    arr=[]
    for len in lens:
-      arr.append(1/(len-5))
+      arr.append(10/abs(len-5))
    return arr
 
 # 获取所有样本的长度
@@ -24,21 +24,22 @@ def GetLen(xys):
    # 样本所有点到（0,0）的距离
    sum=[]
    for xy in xys:
-      xl,yl = xy.reshape((2, 5))
-      len=np.sum(np.sqrt((xl-TargePos[0])**2+(yl-TargePos[1])**2))
-      sum.append(len)
+      xl,yl = xy.reshape((2, N_DIMS))
+      len=np.sum(np.sqrt((xl - TargePos[0])**2 + (yl - TargePos[1])**2))
+      sum.append(1/(len))
    return sum
+
 # 计算DNA内最近点的距离
 def getMinDisToOther(DNAS):
    sum=[]
    for DNA in DNAS:
       minDis=100000
-      xl,yl = DNA.reshape((2, 5))
-      for i in range(5):
-         for j in range(i + 1,5):
-            len=np.sum(np.sqrt((xl-TargePos[0])**2+(yl-TargePos[1])**2))
+      xl,yl = DNA.reshape((2, N_DIMS))
+      for i in range(N_DIMS):
+         for j in range(i + 1,N_DIMS):
+            len=np.sum(np.sqrt((xl[i]-xl[j])**2+(yl[i]-yl[j])**2))
             minDis=min(minDis,len)
-      sum.append(minDis)
+      sum.append(min(minDis,3))
    return sum
 
 # 生小孩
@@ -78,7 +79,11 @@ def kill_bad(pop, kids):
    lens=GetLen(pop['DNA'])
    fitness = GetFitness(lens)      # calculate global fitness
    minDis=getMinDisToOther(pop['DNA'])
-   fitness+=minDis
+   # print('max fit',np.max(fitness))
+   # print('max dis',np.min(minDis))
+   fitness = [ fitness[i] * minDis[i] for i in range(len(fitness))]
+   print('max fit',np.max(fitness))
+
    idx = np.arange(pop['DNA'].shape[0])
    # 递增排列，取后POP_SIZE位
    good_idx = idx[np.argsort(fitness)][-POP_SIZE:]   # selected by fitness ranking (not value)
@@ -112,10 +117,11 @@ for i in range(N_GENERATIONS):
    plt.pause(0.2)
 
    kids = make_kid(sd.pop, N_KID)
-   xl,yl = sd.pop['DNA'][1].reshape((2, 5))
    sd.pop = kill_bad(sd.pop,kids)
+   xl,yl = sd.pop['DNA'][-1].reshape((2, N_DIMS))
    if 'sca' in globals(): sca.remove()
    sca = plt.scatter(xl, yl, s=200, lw=0, c='red',alpha=0.5);
+   plt.scatter(TargePos[0], TargePos[1], s=200, lw=0, c='black',alpha=0.5)
 
 # print(sd.pop['DNA'])
 plt.ioff(); plt.show()
