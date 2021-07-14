@@ -1,17 +1,26 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-N_DIMS = 10  # DNA size
+N_DIMS = 8  # DNA size
 DNA_SIZE = N_DIMS * 2             # DNA (real number)
-DNA_BOUND = [0, 20]       # solution upper and lower bounds
+DNA_BOUND = [0, 40]       # solution upper and lower bounds
 N_GENERATIONS = 800
 POP_SIZE = 600           # population size
 N_KID = 300               # n kids per generation
 
-TargePos=[10,10]
+# 两个目标点
+TargePos=np.array([[10,20],[30,20]]) 
 
 def MakePnt():
    return np.random.rand(N_DIMS, 2)
+
+# 生成列表形式的目标点坐标，形式为 x1x1x2x2 y1y1y2y2,与坐标点对应
+def MakeTarList():
+   xl=TargePos[...,0].repeat(4)
+   yl=TargePos[...,1].repeat(4)
+   return xl,yl
+
+txl,tyl=MakeTarList()
 
 def GetFitness(lens):
    arr=[]
@@ -25,7 +34,7 @@ def GetLen(xys):
    sum=[]
    for xy in xys:
       xl,yl = xy.reshape((2, N_DIMS))
-      len=np.sum(np.sqrt((xl - TargePos[0])**2 + (yl - TargePos[1])**2))
+      len = np.sum(np.sqrt((xl - txl)**2 + (yl - tyl)**2))
       sum.append(1/(len))
    return sum
 
@@ -39,7 +48,7 @@ def getMinDisToOther(DNAS):
          for j in range(i + 1,N_DIMS):
             len=np.sum(np.sqrt((xl[i]-xl[j])**2+(yl[i]-yl[j])**2))
             minDis=min(minDis,len)
-      sum.append(min(minDis,3))
+      sum.append(min(minDis,2))
    return sum
 
 # 生小孩
@@ -79,8 +88,7 @@ def kill_bad(pop, kids):
    lens=GetLen(pop['DNA'])
    fitness = GetFitness(lens)      # calculate global fitness
    minDis=getMinDisToOther(pop['DNA'])
-   # print('max fit',np.max(fitness))
-   # print('max dis',np.min(minDis))
+
    fitness = [ fitness[i] * minDis[i] for i in range(len(fitness))]
    print('max fit',np.max(fitness))
 
@@ -93,35 +101,21 @@ def kill_bad(pop, kids):
 
 class SmartDim(object):
    def __init__(self):
-      self.pop = dict(DNA=10 * np.random.rand(1, DNA_SIZE).repeat(POP_SIZE, axis=0),   # initialize the pop DNA values
+      self.pop = dict(DNA=DNA_BOUND[1] * np.random.rand(1, DNA_SIZE).repeat(POP_SIZE, axis=0),   # initialize the pop DNA values
            mut_strength=np.random.rand(POP_SIZE, DNA_SIZE))                # initialize the pop mutation strength values
-
-   def Myplotting(self):
-      plt.cla()
-
-      # plt.scatter(self.city_pos[:, 0].T, self.city_pos[:, 1].T, s=100, c='k')
-      # plt.scatter(self.pop.)
-      plt.xlim((-0.1, 1.1))
-      plt.ylim((-0.1, 1.1))
-      plt.pause(0.01)
 
 sd =SmartDim()
 print(GetLen(sd.pop['DNA']))
 
 for i in range(N_GENERATIONS):
-
-
-   # print(xl)
-   # print(yl)
-   # print(GetLen(sd.pop['DNA'][i]))
-   plt.pause(0.2)
-
    kids = make_kid(sd.pop, N_KID)
    sd.pop = kill_bad(sd.pop,kids)
    xl,yl = sd.pop['DNA'][-1].reshape((2, N_DIMS))
    if 'sca' in globals(): sca.remove()
+   
+   plt.scatter(txl, tyl, s=200, lw=0, c='black',alpha=0.5)
    sca = plt.scatter(xl, yl, s=200, lw=0, c='red',alpha=0.5);
-   plt.scatter(TargePos[0], TargePos[1], s=200, lw=0, c='black',alpha=0.5)
 
-# print(sd.pop['DNA'])
+   plt.pause(0.2)
+
 plt.ioff(); plt.show()
