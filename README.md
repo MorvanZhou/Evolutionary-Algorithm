@@ -9,7 +9,7 @@ Evolution Strategy, NEAT etc.
 
 All methods mentioned below have their video and text tutorial in Chinese. Visit [莫烦 Python](https://mofanpy.com/) for more.
 
-A python package for Evolution algorithm is now available to be installed. Details are found at [MEvo](https://github.com/MorvanZhou/mevo).
+A python package for Evolution algorithm is now available. Details are found at [MEvo](https://github.com/MorvanZhou/mevo).
 
 * [Genetic Algorithm](tutorial-contents/Genetic%20Algorithm)
   * [Basic GA](tutorial-contents/Genetic%20Algorithm/Genetic%20Algorithm%20Basic.py)
